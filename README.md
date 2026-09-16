@@ -12,16 +12,16 @@ Solução desenvolvida para o desafio técnico da vaga de Desenvolvedor Full Sta
 O projeto consiste em uma aplicação Java para gerenciamento de uma lista de funcionários.
 Foram implementados os seguintes requisitos:
 - Cadastro dos funcionários.
-- Remoção do funcionáio João.
+- Remoção do funcionário João.
 - Exibição dos dados dos funcionários.
 - Formatação das datas e salários.
-- Aumento salárial de 10%.
+- Aumento salarial de 10%.
 - Agrupamento de funcionários por função.
 - Identificação dos funcionários que fazem aniversário em Outubro e Dezembro.
 - Identificação do funcionário mais velho.
 - Ordenação de funcionários por ordem alfabética.
-- Calculo total dos salários dos funcionários.
-- Calculo de quantidade de salários mínimos recebidos por funcionário.
+- Cálculo total dos salários dos funcionários.
+- Cálculo de quantidade de salários mínimos recebidos por funcionário.
 
 ## Estrutura do Projeto
 
@@ -33,7 +33,7 @@ Classe responsável por representar uma pessoa, contendo:
 ### Funcionário
 Classe que herda de `Pessoa` e adiciona:
 - Salário
--Função
+- Função
 
 ### Main
 Classe responsável pela execução da aplicação e implementação dos requisitos do desafio.

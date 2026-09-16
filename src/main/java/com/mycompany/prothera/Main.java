@@ -56,6 +56,8 @@ public class Main {
         formatSalario.setMinimumFractionDigits(2);
         formatSalario.setMaximumFractionDigits(2);
         
+        System.out.println("\n=== Funcionários ===");
+        
         for(Funcionario funcionario : funcionarios) {
             System.out.println(
                 "Nome: " + funcionario.getNome()
@@ -79,6 +81,8 @@ public class Main {
         }
         
 //        3.6 Imprimindo os Funcionários separados por função
+        System.out.println("\n=== Funcionários agrupados por função ===");
+
         for(Map.Entry<String, List<Funcionario>> entry : funcionariosFuncao.entrySet()) {
             System.out.println("Função: " + entry.getKey());
             
@@ -88,7 +92,7 @@ public class Main {
         }
         
 //        3.8 Aniversáriantes de Outubro e Dezembro
-        System.out.println("Os funcionários que fazem aniversário no mês de Outubro ou Dezembro são:");
+        System.out.println("\n=== Aniversariantes de Outubro ou Dezembro ===");
         
         for(Funcionario funcionario : funcionarios) {
             int mes = funcionario.getDataNascimento().getMonthValue();
@@ -109,12 +113,13 @@ public class Main {
         
         int idade = Period.between(funcionarioMaisVelho.getDataNascimento(), LocalDate.now()).getYears();
         
+        System.out.println("\n=== Funcionário mais velho ===");
         System.out.println("O funcionário mais velho é o " + funcionarioMaisVelho.getNome() + " com " + idade + " anos.");
         
 //        3.10 Lista de Funcionários em ordem alfabética
         funcionarios.sort((f1, f2) -> f1.getNome().compareTo(f2.getNome()));
         
-        System.out.println("Lista de Funcionários em ordem alfabética:");
+        System.out.println("\n=== Funcionários em ordem alfabética ===");
         
         for(Funcionario funcionario : funcionarios) {
             System.out.println(funcionario.getNome());
@@ -127,11 +132,13 @@ public class Main {
             totalSalarios = totalSalarios.add(funcionario.getSalario());
         }
         
+        System.out.println("\n=== Total dos salários ===");
         System.out.println("O valor de todos os salários somados é de: R$ " + formatSalario.format(totalSalarios));
         
 //        3.12 Salários Mínimos por Funcionário
         BigDecimal salarioMinimo = new BigDecimal("1212.00");
         
+        System.out.println("\n=== Quantidade de salários mínimos ===");
         for(Funcionario funcionario : funcionarios) {
             BigDecimal quantSalariosMin = funcionario.getSalario().divide(salarioMinimo, 2, RoundingMode.HALF_UP);
             
